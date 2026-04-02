@@ -1,0 +1,14 @@
+{
+    "extensionName": {
+        "message": "标签页切到副屏"
+    },
+    "extensionShortName": {
+        "message": "Tab2Screen"
+    },
+    "extensionDescription": {
+        "message": "一键将当前标签页在主屏与副屏之间切换。"
+    },
+    "actionDefaultTitle": {
+        "message": "将当前标签页切换到副屏"
+    }
+}

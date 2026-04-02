@@ -1,0 +1,14 @@
+{
+    "extensionName": {
+        "message": "Tab To Second Screen"
+    },
+    "extensionShortName": {
+        "message": "Tab2Screen"
+    },
+    "extensionDescription": {
+        "message": "Quickly move the current tab between your primary and secondary screen."
+    },
+    "actionDefaultTitle": {
+        "message": "Move current tab to the second screen"
+    }
+}
