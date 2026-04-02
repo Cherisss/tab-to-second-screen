@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <title>屏幕检测</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 16px;
+      font-family: Arial, sans-serif;
+      line-height: 1.5;
+      background: #f8fafc;
+      color: #0f172a;
+    }
+
+    h1 {
+      margin-top: 0;
+      font-size: 22px;
+    }
+
+    .desc {
+      margin-bottom: 12px;
+      color: #475569;
+      font-size: 14px;
+    }
+
+    button {
+      padding: 10px 14px;
+      margin-right: 8px;
+      margin-bottom: 12px;
+      cursor: pointer;
+      border: none;
+      border-radius: 10px;
+      background: #2563eb;
+      color: #fff;
+    }
+
+    button.secondary {
+      background: #111827;
+    }
+
+    pre {
+      margin: 0;
+      padding: 12px;
+      background: #ffffff;
+      border: 1px solid #dbe2ea;
+      border-radius: 8px;
+      white-space: pre-wrap;
+      word-break: break-word;
+      overflow: auto;
+      min-height: 240px;
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+  <h1>屏幕检测</h1>
+  <div class="desc">
+    先检查权限状态，再申请权限并检测屏幕。检测成功后会自动保存，扩展会默认选择非主屏作为目标副屏。
+  </div>
+
+  <button id="checkPermissionBtn">检查权限状态</button>
+  <button id="detectBtn">申请权限并检测屏幕</button>
+  <button id="openOptionsBtn" class="secondary">打开扩展选项</button>
+
+  <pre id="output">等待操作...</pre>
+
+  <script src="screen-picker.js"></script>
+</body>
+</html>

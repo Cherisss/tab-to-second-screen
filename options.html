@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Tab To Second Screen - 扩展选项</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: #f6f8fb;
+      color: #1f2937;
+    }
+
+    .wrap {
+      max-width: 720px;
+      margin: 32px auto;
+      padding: 0 20px;
+    }
+
+    .card {
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: 24px;
+    }
+
+    .desc {
+      margin: 0 0 20px;
+      color: #6b7280;
+      font-size: 14px;
+    }
+
+    .item {
+      padding: 14px 0;
+      border-top: 1px solid #eef2f7;
+    }
+
+    .item:first-of-type {
+      border-top: none;
+    }
+
+    label {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      cursor: pointer;
+    }
+
+    input[type="checkbox"] {
+      margin-top: 2px;
+      transform: scale(1.15);
+    }
+
+    .title {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .sub {
+      display: block;
+      color: #6b7280;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    .actions {
+      display: flex;
+      gap: 12px;
+      margin-top: 22px;
+      flex-wrap: wrap;
+    }
+
+    button {
+      padding: 10px 16px;
+      border: none;
+      border-radius: 10px;
+      background: #2563eb;
+      color: #ffffff;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    button.secondary {
+      background: #111827;
+    }
+
+    .status {
+      margin-top: 14px;
+      min-height: 20px;
+      color: #2563eb;
+      font-size: 13px;
+    }
+
+    .tip {
+      margin-top: 18px;
+      padding: 12px 14px;
+      background: #f3f6fc;
+      border-radius: 10px;
+      color: #475569;
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      body {
+        background: #0f172a;
+        color: #e5e7eb;
+      }
+
+      .card {
+        background: #111827;
+        border-color: #1f2937;
+        box-shadow: none;
+      }
+
+      .desc,
+      .sub,
+      .tip {
+        color: #94a3b8;
+      }
+
+      .item {
+        border-top-color: #1f2937;
+      }
+
+      .tip {
+        background: #0b1220;
+      }
+
+      button.secondary {
+        background: #334155;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="card">
+      <h1>扩展选项</h1>
+      <p class="desc">切换到副屏时的窗口显示方式</p>
+
+      <div class="item">
+        <label>
+          <input id="autoFullscreen" type="checkbox" />
+          <span>
+            <span class="title">自动进入全屏</span>
+            <span class="sub">切到副屏后自动进入全屏。若启用，本项优先级高于“自动最大化”。</span>
+          </span>
+        </label>
+      </div>
+
+      <div class="item">
+        <label>
+          <input id="autoMaximize" type="checkbox" />
+          <span>
+            <span class="title">自动最大化</span>
+            <span class="sub">切到副屏后自动最大化窗口。默认开启。</span>
+          </span>
+        </label>
+      </div>
+
+      <div class="actions">
+        <button id="saveBtn">保存设置</button>
+        <button id="detectBtn" class="secondary">重新检测屏幕</button>
+      </div>
+
+      <div id="status" class="status"></div>
+
+      <div class="tip">
+        建议：<br />
+        1. 普通办公默认使用“自动最大化”即可。<br />
+        2. 若需要沉浸阅读，再开启“自动进入全屏”。<br />
+        3. 若副屏布局有变化，请重新检测一次屏幕。
+      </div>
+    </div>
+  </div>
+
+  <script src="options.js"></script>
+</body>
+
+</html>
