@@ -1,2 +1,21 @@
-# tab-to-second-screen
-Switch current tab between primary and secondary screen
+# Tab To Second Screen
+
+一键将当前标签页在主屏与副屏之间切换。
+
+## 功能
+- 主屏 ⇄ 副屏 一键切换
+- 自动最大化 / 全屏（可配置）
+- 回主屏时自动合并到已有窗口
+
+## 使用方法
+1. 安装扩展
+2. 点击扩展图标
+3. 首次使用需进行屏幕检测授权
+
+## 权限说明
+- tabs：用于移动标签页
+- storage：保存设置
+- 不会收集或上传任何用户数据
+
+## License
+MIT
